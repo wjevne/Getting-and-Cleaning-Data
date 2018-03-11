@@ -28,10 +28,10 @@ The run_analysis() function can be executed by sourcing the run_analysis.R into 
 
 No user inputs are required. The output is a table. The table can be saved using:
 
-	fwrite(tidy, 'tidy.csv')
+	write.table(tidy, 'tidy.txt', row_names=FALSE)
     
 The csv file can be easily read and viewed using:
 
-	tidy <- read.csv('tidy.csv') # or whatever the appropriate path is
+	tidy <- read.table('tidy.txt', header = TRUE) # or whatever the appropriate path is
     View(tidy)
     
